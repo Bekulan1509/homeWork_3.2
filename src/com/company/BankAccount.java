@@ -26,12 +26,16 @@ public class BankAccount {
         amount -= sum;
         if (sum > amount) {
 
-            throw new LimitException("Вы не можете снять больше денег чем у вас есть на банковском счете", amount);
+            throw new LimitException("у вас не достатачно средств", amount);
         }
 
 
     }
-
+public float lastMoney(){
+        float sum = 4000;
+        amount-=sum;
+        return amount;
+}
 
 }
 
